@@ -1,0 +1,126 @@
+/* src/ReportTable.css */
+
+.report-table-container {
+    padding: 15px;
+    background-color: #EAEFF5;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .report-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .report-filters-cont{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .filter-report{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .report-filters-label {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 5px;
+    flex-basis: 100%;
+  }
+  
+  .report-filters-select, 
+  .report-filters-input {
+    padding: 8px;
+    width: 15rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    flex-basis: 48%;
+    background-color: #EAEFF5;
+  }
+  
+  .report-filters-buttons {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-block: 15px;
+  }
+  
+  .report-filters-submit-button,
+  .report-filters-download-button {
+    background-color: #007b8f;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .report-filters-submit-button:hover,
+  .report-filters-download-button:hover {
+    background-color: #005f6b;
+  }
+  
+  .report-summary {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .report-summary-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .report-summary-section {
+    margin-bottom: 30px;
+  }
+  
+  .report-summary-section-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007b8f;
+    margin-bottom: 10px;
+  }
+  
+  .report-summary-data {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  }
+  
+  .report-summary-data-box {
+    width: 130px;
+    height: 65px;
+    padding: 8px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 1220px) {
+    .report-summary-data {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: 920px) {
+    .report-summary-data {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: 770px) {
+    .report-summary-data {
+        grid-template-columns: 1fr 1fr;
+    }
+    .report-summary-data-box{
+        width: 100px;
+        height: auto;
+    }
+  }

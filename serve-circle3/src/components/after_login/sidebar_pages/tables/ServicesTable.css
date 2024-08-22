@@ -1,0 +1,125 @@
+.services-table-container {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9fafb;
+  }
+  
+  .services-table-filters{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .services-right-filters,
+  .services-left-filters{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .date-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .date-box > p {
+    margin: 0;
+    font-size: small;
+    font-weight: 500;
+    color: gray;
+  }
+  
+  .services-table-select,
+  .services-table-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .services-table-color-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .services-table-clear-filter {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .customer-options{
+    cursor: pointer;
+    font-size: large;
+  }
+  
+  .services-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .services-table-icon{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .services-table th,
+  .services-table td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+  }
+  .services-table th{
+    font-weight: 500;
+    font-size: small;
+    background-color: #EBEFF2;
+    color: gray;
+  }
+  .services-table td{
+    font-weight: 400;
+    font-size: small;
+  }
+  .services-table-status {
+    padding: 5px 10px;
+    background-color: #50a4b8;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .services-table-action {
+    padding: 8px 8px;
+    background-color: #04696E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+  }
+  
+  .services-table-pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-block: 20px;
+  }
+  
+  .services-table-page-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .services-table-export-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

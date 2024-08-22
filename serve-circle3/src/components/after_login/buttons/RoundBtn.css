@@ -1,0 +1,28 @@
+.round-btn{
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 14px;
+    font-weight: 500;
+    max-height: 30px;
+    border-radius: 5px;
+    width: fit-content;
+    color: white;
+    background-color: #FFBD4A;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+    cursor: pointer;
+    border:solid 1px white;
+
+}
+.round-btn li{
+    display: grid;
+    place-items: center;
+}
+.round-btn:hover{
+    background-color: white;
+    color: #FFBD4A;
+    border:solid 1px #FFBD4A;
+}

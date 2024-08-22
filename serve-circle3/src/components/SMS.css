@@ -1,0 +1,58 @@
+/* src/SMS.css */
+.sms-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5vh 10vw;
+    background-color: #ffffff;
+  }
+  .sms-seperator{
+    width: 80%;
+  }
+
+  .sms-image-wrapper {
+
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sms-image {
+    max-width: 85%;
+    height: auto;
+  }
+  
+  .sms-content {
+
+    max-width: 600px;
+  }
+  
+  .sms-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: dosis, sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .sms-description {
+    font-size: 1rem;
+    color: #666;
+  }
+  .sms-description li::marker{
+    font-size: larger;
+    color: rgb(0, 190, 0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sms-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .sms-content {
+      padding-left: 0;
+    }
+  }
+  

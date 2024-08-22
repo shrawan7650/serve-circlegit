@@ -8,3 +8,20 @@
     height: 100dvh;
     overflow: auto;
 }
+
+
+/* Modal CSS */
+
+  .create-cust-container{
+    position: fixed;  
+  }
+  .create-cust-wrapper{
+    position: absolute;
+    background: transparent;
+    width: 100dvw;
+    height: 100dvh;
+  }
+  .stop-scroll{
+    overflow-y: hidden;
+  }
+  

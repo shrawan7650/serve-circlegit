@@ -1,9 +1,28 @@
-import React from 'react'
-import './Jobsheet.css'
+import React, { useEffect, useState } from 'react'
+import './ServicesAf.css'
+import HeaderAf from '../HeaderAf'
+import Tip from '../Tip'
+import CheckCustomer from './CheckCustomer'
+import Tsidebar from '../sidebar/Tsidebar'
 
 const Jobsheet = () => {
+   
+
+
   return (
-    <div>Jobsheet</div>
+    <>
+        <div className='af-pages'>
+          <Tsidebar/>
+          
+          <div className='main-body'>
+            <HeaderAf/>
+            <Tip/>
+
+            <CheckCustomer/>
+
+          </div>
+        </div>
+    </>
   )
 }
 

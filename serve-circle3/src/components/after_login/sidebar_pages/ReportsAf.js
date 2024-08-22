@@ -8,15 +8,23 @@ import Tsidebar from '../sidebar/Tsidebar'
 
 const ReportsAf = () => {
 
-    const[{ initialTitleReports, currentTitle}, dispatch] = useDataLayerValue()
+    const[{currentTitle}, dispatch] = useDataLayerValue()
     
     useEffect(() => {
       dispatch({
         type : 'SET_CURRENT_TITLE',
-        currentTitle : initialTitleReports
+        currentTitle : headingLinks[0]
       })
     
     }, [])
+
+    const headingLinks = [{
+      heading: "Reports",
+      desc: "Day to day insights of your growing business.",
+      btnIcon: '',
+      btnText: "",
+      btnFunction : ''
+    }]
 
   return (
     <>

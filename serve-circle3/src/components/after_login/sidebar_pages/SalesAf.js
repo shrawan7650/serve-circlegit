@@ -9,7 +9,7 @@ import { FaFileInvoice, FaUserTie } from 'react-icons/fa'
 import { useDataLayerValue } from '../../../DataLayer'
 import Tsidebar from '../sidebar/Tsidebar'
 
-const ServicesAf = () => {
+const SalesAf = () => {
 
     const[{currentTitle}, dispatch] = useDataLayerValue()
     
@@ -49,4 +49,4 @@ const ServicesAf = () => {
   )
 }
 
-export default ServicesAf
+export default SalesAf

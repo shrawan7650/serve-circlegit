@@ -7,15 +7,23 @@ import Tsidebar from '../sidebar/Tsidebar'
 
 const Dashboard = () => {
 
-    const[{ initialTitleDashboard, currentTitle}, dispatch] = useDataLayerValue()
+    const[{currentTitle}, dispatch] = useDataLayerValue()
     
     useEffect(() => {
       dispatch({
         type : 'SET_CURRENT_TITLE',
-        currentTitle : initialTitleDashboard
+        currentTitle : headingLinks[0]
       })
     
     }, [])
+
+    const headingLinks = [{
+      heading: "Dashboard",
+      desc: "Analyze Your Work.",
+      btnIcon: '',
+      btnText: "",
+      btnFunction : ''
+    }]
 
   return (
     <>

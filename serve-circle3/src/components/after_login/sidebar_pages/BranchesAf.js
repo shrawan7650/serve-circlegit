@@ -5,18 +5,30 @@ import CurrentHeading from '../CurrentHeading'
 import { useDataLayerValue } from '../../../DataLayer'
 import BranchCard from './BranchCard'
 import Tsidebar from '../sidebar/Tsidebar'
+import { FaStore } from 'react-icons/fa'
 
 const BranchesAf = () => {
 
-    const[{ initialTitleBranches, currentTitle}, dispatch] = useDataLayerValue()
+    const[{currentTitle}, dispatch] = useDataLayerValue()
     
     useEffect(() => {
       dispatch({
         type : 'SET_CURRENT_TITLE',
-        currentTitle : initialTitleBranches
+        currentTitle : headingLinks[0]
       })
     
     }, [])
+
+    const headingLinks = [
+      {
+        heading: "Branches",
+        desc: "Add and manage all your branches here. Click 'Enter' to create job sheets, generate invoices and manage inventory.",
+        btnIcon: <FaStore/>,
+        btnText: "Add Branch",
+        btnFunction : ''
+      }
+      
+    ]
 
   return (
     <>

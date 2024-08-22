@@ -9,9 +9,9 @@ const ServicesReqTable = () => {
       <div className="services-table-filters">
         <div className='services-left-filters'>
             <select className="services-table-select">
-            <option>Search by Request No.</option>
             <option>Search by Name</option>
             <option>Search by Mobile No.</option>
+            <option>Search by Email ID</option>
             </select>
             <input type="text" className="services-table-input" placeholder='Search' />
         </div>

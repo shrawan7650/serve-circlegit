@@ -17,9 +17,8 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
 import Logout from "./components/Logout";
-import CreateJobsheet from "./components/after_login/sidebar_pages/tables/CreateJobsheet";
 import CustomerDetailsForm from "./components/after_login/sidebar_pages/CustomerDetailsForm";
-import CheckCustomer from "./components/after_login/sidebar_pages/CheckCustomer";
+import Jobsheet from "./components/after_login/sidebar_pages/Jobsheet";
 
 const App = () => {
   return (
@@ -34,7 +33,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
-          <Route path="/createjobsheet" element={<CheckCustomer/>} />
+          <Route path="/createjobsheet" element={<Jobsheet/>} />
           <Route path="/createCustomer" element={<CustomerDetailsForm />} />
           <Route
             path="/services"

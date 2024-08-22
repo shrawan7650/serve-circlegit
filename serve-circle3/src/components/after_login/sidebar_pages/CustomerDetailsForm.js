@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CustomerDetailsForm.css'
 
-const CustomerDetailsForm = () => {
+const CustomerDetailsForm = ({handleClickCancel}) => {
     const [formData, setFormData] = useState({
         title: '',
         firstName: '',
@@ -27,19 +27,6 @@ const CustomerDetailsForm = () => {
         console.log(formData);
     };
 
-    const handleCancel = () => {
-        setFormData({
-            title: '',
-            firstName: '',
-            lastName: '',
-            mobileNumber: '',
-            altMobileNumber: '',
-            email: '',
-            address1: '',
-            address2: '',
-            gstin: ''
-        });
-    };
 
     return (
         <div className='create-cust-wrapper'>
@@ -162,7 +149,7 @@ const CustomerDetailsForm = () => {
                 </div>
 
                 <div className="create-cust-actions">
-                    <button type="button" className="create-cust-btn create-cust-btn-cancel" onClick={handleCancel}>Cancel</button>
+                    <button type="button" className="create-cust-btn create-cust-btn-cancel" onClick={handleClickCancel}>Cancel</button>
                     <button type="submit" className="create-cust-btn create-cust-btn-save">Save</button>
                 </div>
             </form>

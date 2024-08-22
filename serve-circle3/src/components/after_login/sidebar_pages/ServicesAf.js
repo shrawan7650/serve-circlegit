@@ -5,7 +5,6 @@ import HeaderAf from '../HeaderAf'
 import Tip from '../Tip'
 import CurrentHeading from '../CurrentHeading'
 import NavbarAf from '../NavbarAf'
-import CreateJobsheet from './tables/CreateJobsheet'
 import { FaUserTie } from 'react-icons/fa'
 import { IoTicket } from 'react-icons/io5'
 import Tsidebar from '../sidebar/Tsidebar'
@@ -13,14 +12,16 @@ import ServicesTable from './tables/ServicesTable'
 import { useDataLayerValue } from '../../../DataLayer'
 import ServicesReqTable from './tables/ServicesReqTable'
 import ServicesCustTable from './tables/ServicesCustTable'
+import CustomerDetailsForm from './CustomerDetailsForm'
 
 var createNewJobsheet;
 
 const ServicesAf = () => {
   const[{currentTitle}, dispatch] = useDataLayerValue()
-
   const navigate = useNavigate();
-  const [editingJobsheet, setEditingJobsheet] = useState(false)
+
+  const [modal, setmodal] = useState(false)
+
   
   useEffect(() => {
     dispatch({
@@ -35,7 +36,11 @@ const ServicesAf = () => {
   }
 
   const createNewCustomer = () => {
-    navigate('/createCustomer')
+    handleClick()
+  }
+
+  const handleClick = () => {
+    setmodal(!modal);
   }
 
   const headingLinks = [
@@ -65,12 +70,28 @@ const ServicesAf = () => {
       btnText: "Create Customer",
       btnFunction: createNewCustomer
     }
-
   ]
+
+
+  if(modal){
+    document.body.classList.add("stop-scroll");
+  }
+  else{
+    document.body.classList.remove("stop-scroll");
+  }  
 
   
   return (
     <>
+
+        {modal && (
+          <div className='create-cust-container'>
+          <div className='create-cust-wrapper' onClick={handleClick}></div>
+          <CustomerDetailsForm handleClickCancel={handleClick}/>
+          </div>
+        )}
+
+
         <div className='af-pages'>
           <Tsidebar/>
           
@@ -93,8 +114,6 @@ const ServicesAf = () => {
               (currentTitle.heading === "Customers") && <ServicesCustTable/>
             }
             
-            { editingJobsheet && <CreateJobsheet/>}
-
           </div>
         </div>
 

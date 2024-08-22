@@ -76,6 +76,8 @@ const ServicesTable = () => {
       </div>
 
       <table className="services-table">
+        {
+          jobSheets.length ? (<>
         <thead>
           <tr>
             {[
@@ -103,7 +105,8 @@ const ServicesTable = () => {
           </tr>
         </thead>
         <tbody>
-          {currentRows.map((jobSheet, index) => (
+          {          
+          currentRows.map((jobSheet, index) => (
             <tr key={index}>
               <td>
                 <img
@@ -138,8 +141,11 @@ const ServicesTable = () => {
                 <BsThreeDotsVertical className="customer-options" />
               </td>
             </tr>
-          ))}
-        </tbody>
+          )) 
+        }
+        </tbody> </>) : <div className="default-table-statement"><h3>No Data To Show</h3></div>
+
+      }
       </table>
 
       <div className="services-table-pagination">

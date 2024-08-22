@@ -11,12 +11,12 @@ import Tsidebar from '../sidebar/Tsidebar'
 
 const ServicesAf = () => {
 
-    const[{ initialTitleSales, currentTitle}, dispatch] = useDataLayerValue()
+    const[{currentTitle}, dispatch] = useDataLayerValue()
     
     useEffect(() => {
       dispatch({
         type : 'SET_CURRENT_TITLE',
-        currentTitle : initialTitleSales
+        currentTitle : headingLinks[0]
       })
     
     }, [])

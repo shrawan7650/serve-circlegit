@@ -15,7 +15,7 @@ const CurrentHeading = () => {
               <h2 className='current-left'>{currentTitle.heading}</h2>
 
               <div className='current-right'>
-                  { currentTitle.btnText && <BigButton icon={currentTitle.btnIcon} text={currentTitle.btnText} />}
+                  { currentTitle.btnText && <BigButton icon={currentTitle.btnIcon} text={currentTitle.btnText} handleBtnClick={currentTitle.btnFunction} />}
               </div>
             </div>
             { 

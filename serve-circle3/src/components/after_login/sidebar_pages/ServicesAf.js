@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom"
 import './ServicesAf.css'
 import HeaderAf from '../HeaderAf'
 import Tip from '../Tip'
@@ -13,24 +14,37 @@ import { useDataLayerValue } from '../../../DataLayer'
 import ServicesReqTable from './tables/ServicesReqTable'
 import ServicesCustTable from './tables/ServicesCustTable'
 
-const ServicesAf = () => {
-  const[{initialTitleServices, currentTitle}, dispatch] = useDataLayerValue()
+var createNewJobsheet;
 
+const ServicesAf = () => {
+  const[{currentTitle}, dispatch] = useDataLayerValue()
+
+  const navigate = useNavigate();
+  const [editingJobsheet, setEditingJobsheet] = useState(false)
+  
   useEffect(() => {
     dispatch({
       type : 'SET_CURRENT_TITLE',
-      currentTitle : initialTitleServices
+      currentTitle : headingLinks[0]
     })
   
   }, [])
 
-  const [editingJobsheet, setEditingJobsheet] = useState(false)
+  var createNewJobsheet = () => {
+    navigate('/createJobsheet')
+  }
+
+  const createNewCustomer = () => {
+    navigate('/createCustomer')
+  }
+
   const headingLinks = [
     {
       heading: 'In House Services',
       desc:'Create new job sheets, manage services and generate invoices.',
       btnIcon: <IoTicket/>,
-      btnText: "Create New Job Sheet"
+      btnText: "Create New Job Sheet",
+      btnFunction: createNewJobsheet
     },
     {
       heading: 'Esclated Services',
@@ -48,11 +62,13 @@ const ServicesAf = () => {
       heading: 'Customers',
       desc:'',
       btnIcon: <FaUserTie/>,
-      btnText: "Create Customer"
+      btnText: "Create Customer",
+      btnFunction: createNewCustomer
     }
 
   ]
 
+  
   return (
     <>
         <div className='af-pages'>
@@ -78,8 +94,10 @@ const ServicesAf = () => {
             }
             
             { editingJobsheet && <CreateJobsheet/>}
+
           </div>
         </div>
+
     </>
   )
 }

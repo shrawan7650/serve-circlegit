@@ -123,3 +123,8 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .default-table-statement{
+    width: 100%;
+    text-align: center;
+  }

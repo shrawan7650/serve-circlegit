@@ -1,10 +1,10 @@
 import React from 'react'
 import './BigButton.css'
 
-const BigButton = ({icon, text}) => {
+const BigButton = ({icon, text, handleBtnClick}) => {
   return (
     <>
-      <ul className='big-btn'>
+      <ul className='big-btn' onClick={handleBtnClick}>
           <li>{icon}</li>
           <li>{text}</li>
       </ul>

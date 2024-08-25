@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CustomerDetailsForm.css'
 
-const CustomerDetailsForm = ({handleClickCancel}) => {
+const CustomerDetailsForm = ({handleClickCancelCust}) => {
     const [formData, setFormData] = useState({
         title: '',
         firstName: '',
@@ -149,7 +149,7 @@ const CustomerDetailsForm = ({handleClickCancel}) => {
                 </div>
 
                 <div className="create-cust-actions">
-                    <button type="button" className="create-cust-btn create-cust-btn-cancel" onClick={handleClickCancel}>Cancel</button>
+                    <button type="button" className="create-cust-btn create-cust-btn-cancel" onClick={handleClickCancelCust}>Cancel</button>
                     <button type="submit" className="create-cust-btn create-cust-btn-save">Save</button>
                 </div>
             </form>

@@ -20,8 +20,8 @@ const NavbarAf = ({Headings}) => {
         <div className='navbar-af'>
 
         { 
-          Headings.map((item) => (
-            <li onClick={()=>{setCurrentTitle(item)}}  >{item.heading}</li>
+          Headings.map((item, index) => (
+            <li key={index} onClick={()=>{setCurrentTitle(item)}}  >{item.heading}</li>
           ))
         }
 

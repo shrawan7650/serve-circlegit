@@ -14,7 +14,6 @@ import ServicesReqTable from './tables/ServicesReqTable'
 import ServicesCustTable from './tables/ServicesCustTable'
 import CustomerDetailsForm from './CustomerDetailsForm'
 
-var createNewJobsheet;
 
 const ServicesAf = () => {
   const[{currentTitle}, dispatch] = useDataLayerValue()
@@ -41,6 +40,7 @@ const ServicesAf = () => {
 
   const handleClick = () => {
     setmodal(!modal);
+    console.log(modal)
   }
 
   const headingLinks = [
@@ -73,26 +73,17 @@ const ServicesAf = () => {
   ]
 
 
-  if(modal){
-    document.body.classList.add("stop-scroll");
-  }
-  else{
-    document.body.classList.remove("stop-scroll");
-  }  
-
-  
   return (
     <>
 
-        {modal && (
-          <div className='create-cust-container'>
-          <div className='create-cust-wrapper' onClick={handleClick}></div>
-          <CustomerDetailsForm handleClickCancel={handleClick}/>
-          </div>
-        )}
-
-
         <div className='af-pages'>
+
+          {modal && (
+            <div className='customer-add-container'>
+              <CustomerDetailsForm handleClickCancelCust={handleClick}/>
+            </div>
+          )}
+
           <Tsidebar/>
           
           <div className='main-body'>

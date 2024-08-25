@@ -1,0 +1,39 @@
+.products-form {
+    padding: 10px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.products-title {
+    margin: 0;
+    color: #023437;
+    margin-bottom: 20px;
+}
+
+.products-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.products-label {
+    margin-bottom: 5px;
+}
+
+.products-input {
+    padding: 8px;
+    max-width: 300px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.products-save-btn {
+    padding: 10px 20px;
+    background-color: #008080;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}

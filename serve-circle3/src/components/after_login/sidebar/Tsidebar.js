@@ -63,7 +63,7 @@ const routes = [
     icon: <BiCog />,
     subRoutes: [
       {
-        path: "/settings/manage_profile",
+        path: "/settings/profile",
         name: "Manage Profile",
         icon: <FaRegUser />
       },
@@ -98,16 +98,6 @@ const routes = [
         icon: <GrLicense />
       },
     ]
-  },
-  {
-    path: "/help_videos",
-    name: "Help Videos",
-    icon: <MdOutlineVideoSettings />
-  },
-  {
-    path: "/help_center",
-    name: "Help Center",
-    icon: <MdHelpCenter />
   },
   {
     path: "/mobile_app",

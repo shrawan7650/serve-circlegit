@@ -1,0 +1,23 @@
+.af-pages{
+    height: 100%;
+    display: flex;
+    background-color: #EAEFF5;
+    position: relative;
+}
+.main-body{
+    width: 100vw;
+    height: 100dvh;
+    overflow: auto;
+}
+
+
+/* Modal CSS */
+
+.create-branch-container{
+    width: 100dvw;
+    height: 100dvh;
+    position: absolute;  
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+

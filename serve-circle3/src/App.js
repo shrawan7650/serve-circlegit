@@ -17,8 +17,9 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
 import Logout from "./components/Logout";
-import CustomerDetailsForm from "./components/after_login/sidebar_pages/CustomerDetailsForm";
 import Jobsheet from "./components/after_login/sidebar_pages/Jobsheet";
+import ManageProfileAf from "./components/after_login/sidebar_pages/settings_pages/ManageProfileAf";
+import Products from "./components/after_login/sidebar_pages/settings_pages/Products";
 
 const App = () => {
   return (
@@ -33,12 +34,11 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
-          <Route path="/createjobsheet" element={<Jobsheet/>} />
-          <Route path="/createCustomer" element={<CustomerDetailsForm />} />
+          <Route path="/createjobsheet" element={<Jobsheet />} />
           <Route
             path="/services"
-             element={<ServicesAf/>} />
-          
+            element={<ServicesAf />} />
+
           <Route path="/sales" element={<ProtectedRoute element={SalesAf} />} />
           <Route
             path="/inventory"
@@ -55,6 +55,10 @@ const App = () => {
           <Route
             path="/reports"
             element={<ProtectedRoute element={ReportsAf} />}
+          />
+          <Route
+            path="/settings/profile"
+            element={<ProtectedRoute element={ManageProfileAf} />}
           />
           <Route
             path="/Tsidebar"

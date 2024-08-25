@@ -6,7 +6,7 @@ const CreateJobsheet = () => {
   const [jobSheetData, setJobSheetData] = useState({
     serviceType: 'Carry In',
     jobSheetNumberSequence: 'Select',
-    jobSheetNumber: '1J55',
+    jobSheetNumber: '',
     firstName: '',
     lastName: '',
     email: '',
@@ -69,17 +69,13 @@ const CreateJobsheet = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/job-sheets/create', jobSheetDataToSend, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+      const response = await axios.post('http://localhost:5000/job-sheets/create', jobSheetDataToSend);
       console.log('Job sheet saved:', response.data);
       // Optionally, reset the form or provide feedback to the user
       setJobSheetData({
         serviceType: 'Carry In',
         jobSheetNumberSequence: 'Select',
-        jobSheetNumber: '1J55',
+        jobSheetNumber: '',
     firstName: '',
     lastName: '',
     email: '',

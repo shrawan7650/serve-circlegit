@@ -11,8 +11,9 @@ const ServicesTable = () => {
   const [rowsPerPage] = useState(5); // Number of rows per page
 
   useEffect(() => {
-    axios.get('http://localhost:5000/job-sheets')
+    axios.get('http://localhost:5000/job-sheets/all-job-sheet')
       .then(response => {
+        // console.log('Fetched job sheets:', response.data);
         setJobSheets(response.data);
       })
       .catch(error => {
@@ -42,7 +43,25 @@ const ServicesTable = () => {
       setCurrentPage(currentPage - 1);
     }
   };
-
+  const calculateTAT = (createdAt) => {
+    const createdDate = new Date(createdAt);
+    console.log("cuurentdata",createdDate)
+    const currentDate = new Date();
+    
+    // Calculate the difference in time
+    const diffTime = Math.abs(currentDate - createdDate);
+    
+    // Convert time difference to days
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+ console.log("diffDay",diffDays)
+    if (diffDays === 1) {
+      return "Created today";
+    } else if (diffDays === 2) {
+      return "1 day ago";
+    } else {
+      return `${Number(diffDays)} days ago`;
+    }
+  };
   return (
     <div className="services-table-container">
       <div className="services-table-filters">
@@ -128,9 +147,9 @@ const ServicesTable = () => {
               <td>
                 <span className="services-table-status">{jobSheet.status}</span>
               </td>
-              <td>Quotation Status</td> {/* Static */}
-              <td>TAT</td> {/* Static */}
-              <td>Escalated To</td> {/* Static */}
+              <td></td> {/* Static */}
+              <td>{calculateTAT(jobSheet.createdAt)}</td>
+              <td></td> {/* Static */}
               <td>Current Assignee</td> {/* Static */}
               <td>
                 <button className="services-table-action">

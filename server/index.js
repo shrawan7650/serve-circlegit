@@ -5,7 +5,9 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { UserRouter } from './routes/user.js'; // Ensure this import matches your actual export
 import jobSheetRouter from './routes/jobsheet.js'; // Correct import for jobSheetRouter
-
+import branchRoutes from './routes/branches.js';
+import customerRoutes from "./routes/Coustmer.js";
+import inventory from "./routes/InventoryNewItem.js"
 dotenv.config();
 
 const app = express();
@@ -21,7 +23,9 @@ app.use(express.json());
 // Routes
 app.use('/auth', UserRouter); // User routes
 app.use('/job-sheets', jobSheetRouter); // Job Sheet routes
-
+app.use('/branches', branchRoutes);
+app.use('/customer',customerRoutes)
+app.use("/inventory",inventory)
 // MongoDB connection
 mongoose.connect('mongodb://127.0.0.1:27017/authenticate', {
   useNewUrlParser: true,
